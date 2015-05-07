@@ -1,0 +1,14 @@
+1. Download the latest version of R. As of this writing, the latest 
+version is 3.2.0. You can see your current version by typing R.Version().
+You can download the latest version by typing "download latest version
+of R".
+
+2. Get a Census API Key: http://api.census.gov/data/key_signup.html
+
+3. Register your key in R by typing:
+  
+  install.packages("acs")
+  library(acs)
+  api.key.install("<your key>")
+
+4. Run the install.R file in this directory.
