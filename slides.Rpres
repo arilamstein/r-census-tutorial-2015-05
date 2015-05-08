@@ -51,7 +51,7 @@ head(df_pop_state)
 
 **Exercise:** What is the population of your home state? Tell your neighbor.
 
-Answer
+My Answer
 ======================================================
 
 ```{r}
@@ -65,6 +65,8 @@ Boxplot
 ```{r}
 boxplot(df_pop_state$value)
 ```
+
+**Exercise:** Draw one interpretation from this plot
 
 Choropleth Map 
 ========================================================
@@ -103,14 +105,12 @@ data(df_state_demographics)
 colnames(df_state_demographics)
 ```
 
-**Exercise:** Tell your neighbor one statistic about your home state.
-**Exercise:** Make a boxplot of one statistic above.<br/>
-**Exercise:** Make a choropleth map of one statistic above. 
+**Exercise:** Make a choropleth map of one statistic above. Share it with your neighbor.
 
 My answer  
 ========================================================
 
-```{r}
+```{r, fig.width=25, fig.height=12.5}
 df_state_demographics$value = df_state_demographics$percent_white
  
 state_choropleth(df_state_demographics, num_colors=2)
@@ -121,8 +121,8 @@ Part 2
 
 # Counties
 
+County Population
 ========================================================
-title: false
 
 ```{r}
 library(choroplethr)
@@ -180,7 +180,7 @@ Zoom
 ========================================================
 
 ```{r, fig.width=25, fig.height=12.5}
-county_choropleth(df_pop_county, state_zoom="california")
+county_choropleth(df_pop_county, state_zoom="california", num_colors=4)
 ```
 
 **Exercise:** Draw one interpretation from this map
@@ -267,9 +267,7 @@ colnames(df_zip_demographics)
 
 **Exercise:** Make a map of some demographic of the ZIPs in your home state. Share it with your neighbor.
 
-**Exercise:** Make a map of some demographic of the ZIPs in your home county. Share it with your neighbor.
-
-My Answer - Part 1
+My Answer
 ========================================================
 
 ```{r, fig.width=25, fig.height=12.5}
@@ -280,7 +278,12 @@ zip_choropleth(df_zip_demographics, state_zoom="new york")
 
 **Exercise:** Draw one inference from this map
 
-My Answer - Part 2
+Exercise
+========================================================
+
+**Exercise:** Make a map of some demographic of the ZIPs in your home county. Share it with your neighbor.
+
+My Answer
 ========================================================
 
 ```{r, fig.width=25, fig.height=12.5}

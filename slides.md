@@ -62,7 +62,7 @@ head(df_pop_state)
 
 **Exercise:** What is the population of your home state? Tell your neighbor.
 
-Answer
+My Answer
 ======================================================
 
 
@@ -85,6 +85,8 @@ boxplot(df_pop_state$value)
 ```
 
 ![plot of chunk unnamed-chunk-3](slides-figure/unnamed-chunk-3-1.png) 
+
+**Exercise:** Draw one interpretation from this plot
 
 Choropleth Map 
 ========================================================
@@ -139,9 +141,7 @@ colnames(df_state_demographics)
 [7] "per_capita_income" "median_rent"       "median_age"       
 ```
 
-**Exercise:** Tell your neighbor one statistic about your home state.
-**Exercise:** Make a boxplot of one statistic above.<br/>
-**Exercise:** Make a choropleth map of one statistic above. 
+**Exercise:** Make a choropleth map of one statistic above. Share it with your neighbor.
 
 My answer  
 ========================================================
@@ -160,8 +160,8 @@ Part 2
 
 # Counties
 
+County Population
 ========================================================
-title: false
 
 
 ```r
@@ -246,7 +246,7 @@ Zoom
 
 
 ```r
-county_choropleth(df_pop_county, state_zoom="california")
+county_choropleth(df_pop_county, state_zoom="california", num_colors=4)
 ```
 
 ![plot of chunk unnamed-chunk-14](slides-figure/unnamed-chunk-14-1.png) 
@@ -375,9 +375,7 @@ colnames(df_zip_demographics)
 
 **Exercise:** Make a map of some demographic of the ZIPs in your home state. Share it with your neighbor.
 
-**Exercise:** Make a map of some demographic of the ZIPs in your home county. Share it with your neighbor.
-
-My Answer - Part 1
+My Answer
 ========================================================
 
 
@@ -391,7 +389,12 @@ zip_choropleth(df_zip_demographics, state_zoom="new york")
 
 **Exercise:** Draw one inference from this map
 
-My Answer - Part 2
+Exercise
+========================================================
+
+**Exercise:** Make a map of some demographic of the ZIPs in your home county. Share it with your neighbor.
+
+My Answer
 ========================================================
 
 
