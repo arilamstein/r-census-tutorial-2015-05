@@ -28,9 +28,22 @@ Today we will use R to understand the demographics of the
 <br/>
 If time permits we will also:
 
-1. Learn more about the **data**
-2. Analyze **historic** data
-3. Work directly with the census **API**
+1. Analyze **historic** data
+2. Work directly with the census **API**
+
+The Data
+========================================================
+
+1. American Community Survey (ACS) 
+  * Not the decennial census
+2. Very detailed / personal questions
+  * "How long is your commute?"
+  * "What is your income?"
+3. $400B / year is allocated based on the results
+  * Where should money for schools go?
+4. R's **acs** package 
+  * Connects to the Census API Directly
+  * Deals with confidence intervals, etc.
 
 Part 1
 ========================================================
@@ -209,6 +222,18 @@ Part 3
 
 # ZIP Codes
 
+ZIP Code vs. ZCTA
+========================================================
+
+Post Office maintains **ZIP Codes**<br/>
+Census maintains **Zip Code Tabulated Areas (ZCTA)**
+
+ZIP Codes are difficult to analyze:
+  * Aren't polygonal
+  * Change freqently
+  * Span counties and states
+
+
 ZIP Code Population
 ========================================================
 
@@ -226,17 +251,6 @@ My Answer
 ```{r}
 df_pop_zip[df_pop_zip$region == "11021", ]
 ```
-
-ZIP Code vs. ZCTA
-========================================================
-
-Post Office maintains **ZIP Codes**<br/>
-Census maintains **Zip Code Tabulated Areas (ZCTA)**
-
-ZIP Codes are difficult to analyze:
-  * Aren't polygonal
-  * Change freqently
-  * Span counties and states
   
 Mapping ZCTAs in a State
 ========================================================
