@@ -422,3 +422,17 @@ zip_choropleth(df_zip_demographics, county_zoom=36059, num_colors=1)
 
 **Exercise:** Draw one inference from this map
 
+Wrapping Up
+========================================================
+
+1. Please provide feedback!
+  * http://goo.gl/forms/e5DdRqB6rt
+  
+2. Need a software engineer or data analyst?
+  * I'm looking for part-time / contract work 
+  * Want to continue with open source
+  
+3. Keep in touch!
+  * Twitter: @AriLamstein
+  * Blog: justanrblog.wordpress.com
+  * Email: arilamstein@gmail.com
