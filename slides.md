@@ -24,12 +24,11 @@ Today we will use R to understand the demographics of the
 3. **ZIP code** you are from
 
 <br/>
-<br/>
-<br/>
-If time permits we will also:
+
+Then we will 
 
 1. Analyze **historic** data
-2. Work directly with the census **API**
+2. Look at **more** variables
 
 The Data
 ========================================================
@@ -421,6 +420,50 @@ zip_choropleth(df_zip_demographics, county_zoom=36059, num_colors=1)
 ![plot of chunk unnamed-chunk-23](slides-figure/unnamed-chunk-23-1.png) 
 
 **Exercise:** Draw one inference from this map
+
+Part 4
+========================================================
+
+# Historic Data
+
+Technical Details - R
+========================================================
+
+* Get a Census API Key: http://api.census.gov/data/key_signup.html
+* Then type:
+
+
+```r
+library(acs)
+# api.key.install("<key>")
+```
+
+Technical Details - Census Bureau
+========================================================
+
+* "Mapping US Census Data": http://cran.r-project.org/web/packages/choroplethr/vignettes/e-mapping-us-census-data.html
+
+![survey-screenshot](acs-surveys.png)
+
+Example: New York State Population in 2010
+========================================================
+
+* `?get_state_demographics`. Also county and zip
+
+
+```r
+library(choroplethr)
+df_2010 = get_state_demographics(endyear=2010, 
+                                 span=5)
+df_2010[df_2010$region == "new york", 
+                          "total_population"]
+```
+
+```
+[1] 19229752
+```
+
+**Exercise**: What was the population of your home state according to the 2010 5-year ACS?
 
 Wrapping Up
 ========================================================
