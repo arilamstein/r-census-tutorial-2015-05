@@ -326,19 +326,19 @@ library(acs)
 Technical Details - Census Bureau
 ========================================================
 
-* "Mapping US Census Data": http://cran.r-project.org/web/packages/choroplethr/vignettes/e-mapping-us-census-data.html
+* Google "CRAN choroplethr"
+  * click "Mapping US Census Data"
+  
+![survey-screenshot](select-a-survey.png)
 
-![survey-screenshot](select a survey.png)
-
-Example: New York State Population in 2010
+New York in 2010
 ========================================================
 
-* `?get_state_demographics`. Also county and zip
+* `?get_state_demographics` 
 
 ```{r}
 library(choroplethr)
-df_2010 = get_state_demographics(endyear=2010, 
-                                 span=5)
+df_2010 = get_state_demographics(2010, 5)
 df_2010[df_2010$region == "new york", 
                           "total_population"]
 ```
@@ -353,8 +353,9 @@ Part 5
 What's Available?
 ========================================================
 
-* "Mapping US Census Data": http://cran.r-project.org/web/packages/choroplethr/vignettes/e-mapping-us-census-data.html
-
+* Google "CRAN choroplethr"
+  * click "Mapping US Census Data"
+  
 ![table-list](table-list.png)
 
 Example: Public Assistance Income
