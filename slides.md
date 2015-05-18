@@ -443,7 +443,7 @@ Technical Details - Census Bureau
 
 * "Mapping US Census Data": http://cran.r-project.org/web/packages/choroplethr/vignettes/e-mapping-us-census-data.html
 
-![survey-screenshot](acs-surveys.png)
+![survey-screenshot](select a survey.png)
 
 Example: New York State Population in 2010
 ========================================================
@@ -464,6 +464,31 @@ df_2010[df_2010$region == "new york",
 ```
 
 **Exercise**: What was the population of your home state according to the 2010 5-year ACS?
+
+Part 5
+========================================================
+
+# More Data
+
+What's Available?
+========================================================
+
+* "Mapping US Census Data": http://cran.r-project.org/web/packages/choroplethr/vignettes/e-mapping-us-census-data.html
+
+![table-list](table-list.png)
+
+Example: Public Assistance Income
+========================================================
+
+* Search for "B19067": AGGREGATE PUBLIC ASSISTANCE INCOME IN THE PAST 12 MONTHS (IN 2012 INFLATION-ADJUSTED DOLLARS) FOR HOUSEHOLDS 
+
+
+```r
+# 6075 is the county FIPS code for San Francisco
+zip_choropleth_acs("B19067", county_zoom=6075, num_colors=3)
+```
+
+![plot of chunk unnamed-chunk-26](slides-figure/unnamed-chunk-26-1.png) 
 
 Wrapping Up
 ========================================================
