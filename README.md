@@ -8,3 +8,9 @@ You can get the latest version of R by googling "download latest version
 of R".
 
 1. Run the install.R file in this directory.
+
+1. Get an API Key from the US Census Bureau [here](http://api.census.gov/data/key_signup.html). Then type:
+```
+library(acs)
+api.key.install("<your census api key>")
+```
