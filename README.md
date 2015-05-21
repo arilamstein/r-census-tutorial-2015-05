@@ -14,3 +14,5 @@ of R".
 library(acs)
 api.key.install("<your census api key>")
 ```
+
+1. The slides are in HTML and can be downloaded from dropbox [here](https://www.dropbox.com/s/7ssojopulaetcnq/slides.html?dl=0).
