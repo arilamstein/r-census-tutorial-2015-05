@@ -1,7 +1,8 @@
 Analyzing Census Data in R
 ========================================================
-author: Ari Lamstein
-date: May 2015
+author: Ari Lamstein (@AriLamstein)
+date: San Francisco R-Ladies Meetup, May 2015
+
 
 Exercise 
 ========================================================
@@ -158,6 +159,7 @@ My Answer
 ========================================================
 
 ```{r}
+# 36059 is the FIPS code for Nassau County, NY
 df_pop_county[df_pop_county$region == 36059, ]
 ```
 
@@ -251,6 +253,15 @@ My Answer
 df_pop_zip[df_pop_zip$region == "11021", ]
 ```
   
+Boxplot
+========================================================
+
+```{r}
+boxplot(df_pop_zip$value)
+```
+
+**Exercise:** Draw one interpretation from this boxplot
+
 Mapping ZCTAs in a State
 ========================================================
 
@@ -269,6 +280,13 @@ zip_choropleth(df_pop_zip, county_zoom=36059)
 ```
 
 **Exercise:** Draw one inference from this map
+
+Exercises
+========================================================
+
+1. Create a choropleth map showing the population of the zip codes in your home state. Share it with your neighbor.
+
+2. Create a choropleth map showing the population of the zip codes in your home county. Share it with your neighbor.
 
 More ZIP Demographics
 ========================================================
@@ -326,8 +344,7 @@ library(acs)
 Technical Details - Census Bureau
 ========================================================
 
-* Google "CRAN choroplethr"
-  * click "Mapping US Census Data"
+* Google "CRAN choroplethr" -> click "Mapping US Census Data"
   
 ![survey-screenshot](select-a-survey.png)
 
@@ -353,8 +370,7 @@ Part 5
 What's Available?
 ========================================================
 
-* Google "CRAN choroplethr"
-  * click "Mapping US Census Data"
+* Google "CRAN choroplethr" -> "Mapping US Census Data" 
   
 ![table-list](table-list.png)
 
@@ -375,7 +391,6 @@ Wrapping Up
   * http://goo.gl/forms/e5DdRqB6rt
   
 2. Need a software engineer or data analyst?
-  * I'm looking for part-time / contract work 
   * Want to continue with open source
   
 3. Keep in touch!

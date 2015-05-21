@@ -1,7 +1,8 @@
 Analyzing Census Data in R
 ========================================================
-author: Ari Lamstein
-date: May 2015
+author: Ari Lamstein (@AriLamstein)
+date: San Francisco R-Ladies Meetup, May 2015
+
 
 Exercise 
 ========================================================
@@ -209,6 +210,7 @@ My Answer
 
 
 ```r
+# 36059 is the FIPS code for Nassau County, NY
 df_pop_county[df_pop_county$region == 36059, ]
 ```
 
@@ -346,6 +348,18 @@ df_pop_zip[df_pop_zip$region == "11021", ]
 2811  11021 17449
 ```
   
+Boxplot
+========================================================
+
+
+```r
+boxplot(df_pop_zip$value)
+```
+
+![plot of chunk unnamed-chunk-19](slides-figure/unnamed-chunk-19-1.png) 
+
+**Exercise:** Draw one interpretation from this boxplot
+
 Mapping ZCTAs in a State
 ========================================================
 
@@ -354,7 +368,7 @@ Mapping ZCTAs in a State
 zip_choropleth(df_pop_zip, state_zoom="new york")
 ```
 
-![plot of chunk unnamed-chunk-19](slides-figure/unnamed-chunk-19-1.png) 
+![plot of chunk unnamed-chunk-20](slides-figure/unnamed-chunk-20-1.png) 
 
 **Exercise:** Draw one inference from this map
 
@@ -367,9 +381,16 @@ Mapping ZCTAs in a County
 zip_choropleth(df_pop_zip, county_zoom=36059)
 ```
 
-![plot of chunk unnamed-chunk-20](slides-figure/unnamed-chunk-20-1.png) 
+![plot of chunk unnamed-chunk-21](slides-figure/unnamed-chunk-21-1.png) 
 
 **Exercise:** Draw one inference from this map
+
+Exercises
+========================================================
+
+1. Create a choropleth map showing the population of the zip codes in your home state. Share it with your neighbor.
+
+2. Create a choropleth map showing the population of the zip codes in your home county. Share it with your neighbor.
 
 More ZIP Demographics
 ========================================================
@@ -398,7 +419,7 @@ df_zip_demographics$value = df_zip_demographics$per_capita
 zip_choropleth(df_zip_demographics, state_zoom="new york")
 ```
 
-![plot of chunk unnamed-chunk-22](slides-figure/unnamed-chunk-22-1.png) 
+![plot of chunk unnamed-chunk-23](slides-figure/unnamed-chunk-23-1.png) 
 
 **Exercise:** Draw one inference from this map
 
@@ -417,7 +438,7 @@ df_zip_demographics$value = df_zip_demographics$per_capita
 zip_choropleth(df_zip_demographics, county_zoom=36059, num_colors=1)
 ```
 
-![plot of chunk unnamed-chunk-23](slides-figure/unnamed-chunk-23-1.png) 
+![plot of chunk unnamed-chunk-24](slides-figure/unnamed-chunk-24-1.png) 
 
 **Exercise:** Draw one inference from this map
 
@@ -441,8 +462,7 @@ library(acs)
 Technical Details - Census Bureau
 ========================================================
 
-* Google "CRAN choroplethr"
-  * click "Mapping US Census Data"
+* Google "CRAN choroplethr" -> click "Mapping US Census Data"
   
 ![survey-screenshot](select-a-survey.png)
 
@@ -473,8 +493,7 @@ Part 5
 What's Available?
 ========================================================
 
-* Google "CRAN choroplethr"
-  * click "Mapping US Census Data"
+* Google "CRAN choroplethr" -> "Mapping US Census Data" 
   
 ![table-list](table-list.png)
 
@@ -489,7 +508,7 @@ Example: Public Assistance Income
 zip_choropleth_acs("B19067", county_zoom=6075, num_colors=3)
 ```
 
-![plot of chunk unnamed-chunk-26](slides-figure/unnamed-chunk-26-1.png) 
+![plot of chunk unnamed-chunk-27](slides-figure/unnamed-chunk-27-1.png) 
 
 Wrapping Up
 ========================================================
@@ -498,7 +517,6 @@ Wrapping Up
   * http://goo.gl/forms/e5DdRqB6rt
   
 2. Need a software engineer or data analyst?
-  * I'm looking for part-time / contract work 
   * Want to continue with open source
   
 3. Keep in touch!
