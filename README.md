@@ -7,12 +7,12 @@ version is 3.2.0. You can see your current version by typing `R.Version()` from 
 You can get the latest version of R by googling "download latest version
 of R".
 
-1. Run the install.R file in this directory.
+2. Run the install.R file in this directory.
 
-1. Get an API Key from the US Census Bureau [here](http://api.census.gov/data/key_signup.html). Then type:
+3. Get an API Key from the US Census Bureau [here](http://api.census.gov/data/key_signup.html). Then type:
 ```
 library(acs)
 api.key.install("<your census api key>")
 ```
 
-1. The slides are in HTML and can be downloaded from dropbox [here](https://www.dropbox.com/s/7ssojopulaetcnq/slides.html?dl=0).
+4. The slides are in HTML and can be downloaded from dropbox [here](https://www.dropbox.com/s/7ssojopulaetcnq/slides.html?dl=0).
