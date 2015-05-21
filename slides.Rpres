@@ -3,10 +3,7 @@ Analyzing Census Data in R
 author: Ari Lamstein (@AriLamstein)
 date: San Francisco R-Ladies Meetup, May 2015
 
-
-Exercise 
 ========================================================
-title: false
 
 Introduce yourself to your neighbor
 
@@ -14,9 +11,7 @@ Introduce yourself to your neighbor
 2. What **county** are you from?
 3. What **ZIP code** are you from?
 
-Today
 ========================================================
-title:false
 
 Today we will use R to understand the demographics of the
 
@@ -50,9 +45,7 @@ Part 1
 
 # States
 
-Let's start!
 ========================================================
-title:false
 
 ```{r}
 library(choroplethr)
@@ -181,9 +174,7 @@ county_choropleth(df_pop_county)
 
 **Exercise:** Draw one interpretation from this map
 
-Choropleth Map
 ========================================================
-title:false
 ```{r, fig.width=25, fig.height=12.5}
 county_choropleth(df_pop_county, num_colors=1)
 ```
