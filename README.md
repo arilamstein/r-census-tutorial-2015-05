@@ -7,7 +7,7 @@ version is 3.2.0. You can see your current version by typing `R.Version()` from 
 You can get the latest version of R by googling "download latest version
 of R".
 
-2. Run the install.R file in this directory.
+2. Run the `install.R` file in this directory.
 
 3. Get an API Key from the US Census Bureau [here](http://api.census.gov/data/key_signup.html). Then type:
 ```
